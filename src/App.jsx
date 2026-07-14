@@ -55,7 +55,11 @@ export default function App() {
 
   const [route, setRoute] = useState(getRoute)
   useEffect(() => {
-    const onHash = () => setRoute(getRoute())
+    const onHash = () => {
+      setRoute(getRoute())
+      // Umami only hooks pushState/replaceState; hash navigation must be tracked manually
+      window.umami?.track((p) => ({ ...p, url: window.location.pathname + window.location.hash }))
+    }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
@@ -87,7 +91,15 @@ export default function App() {
         <a className="btn btn-primary" href="#integrate">
           {t.nav.cta}
         </a>
-        <button type="button" className="btn btn-secondary" onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          onClick={() => {
+            const next = lang === 'en' ? 'ar' : 'en'
+            window.umami?.track('language-switch', { language: next })
+            setLang(next)
+          }}
+        >
           {t.nav.langToggle}
         </button>
       </nav>

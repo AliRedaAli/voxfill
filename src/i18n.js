@@ -268,6 +268,10 @@ export const translations = {
             p: 'This policy describes what the hosted voxFill service and this website collect and how it is handled. If your voxFill backend is self-hosted, audio and schemas go to your own servers and never reach us — only this website’s basic analytics apply.',
           },
           {
+            h: 'Website analytics',
+            p: 'This website uses Umami, a cookie-free analytics service, to measure visits. It records anonymized data such as pages viewed, country, browser, device and the site language you choose. No cookies are set and no personal information is stored, so your visit cannot be tied to you.',
+          },
+          {
             h: 'What leaves the user’s browser',
             p: 'When a voice fill runs, exactly two things are sent to the backend: the audio clip and a schema of the form’s fields (ids, labels, types, constraints). No DOM elements, no page content and no existing field values are collected.',
           },
@@ -563,6 +567,10 @@ ar: {
           {
             h: 'ما تغطيه هذه السياسة',
             p: 'تصف هذه السياسة ما تجمعه خدمة voxFill المستضافة وهذا الموقع وكيفية التعامل معه. إذا كان خادم voxFill لديك مستضافاً ذاتياً، فإن الصوت والمخططات تذهب إلى خوادمك أنت ولا تصلنا أبداً — ولا ينطبق سوى التحليلات الأساسية لهذا الموقع.',
+          },
+          {
+            h: 'تحليلات الموقع',
+            p: 'يستخدم هذا الموقع خدمة Umami للتحليلات — وهي خدمة لا تعتمد على ملفات تعريف الارتباط (الكوكيز) — لقياس الزيارات. تُسجَّل بيانات مجهولة الهوية مثل الصفحات المعروضة والدولة والمتصفح ونوع الجهاز ولغة الموقع التي تختارها. لا تُستخدم أي كوكيز ولا تُخزَّن معلومات شخصية، فلا يمكن ربط زيارتك بك.',
           },
           {
             h: 'ما الذي يغادر متصفح المستخدم',
