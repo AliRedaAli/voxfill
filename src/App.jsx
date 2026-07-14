@@ -65,6 +65,21 @@ export default function App() {
   }, [])
   const legalPage = route === 'terms' || route === 'privacy' ? route : null
 
+  const [activeSection, setActiveSection] = useState('')
+  useEffect(() => {
+    if (legalPage) {
+      setActiveSection('')
+      return
+    }
+    // a section is "active" while it crosses a band around 40% viewport height
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActiveSection(e.target.id)),
+      { rootMargin: '-40% 0px -55% 0px' },
+    )
+    document.querySelectorAll('section[id]').forEach((s) => observer.observe(s))
+    return () => observer.disconnect()
+  }, [legalPage])
+
   useEffect(() => {
     if (legalPage) window.scrollTo(0, 0)
     else if (window.location.hash && !window.location.hash.startsWith('#/')) {
@@ -81,13 +96,19 @@ export default function App() {
             vox<span style={{ color: 'var(--color-accent)' }}>Fill</span>
           </span>
         </span>
-        <a href="#demo">{t.nav.demo}</a>
-        <a href="#what">{t.nav.how}</a>
-        <a href="#features">{t.nav.features}</a>
-        <a href="#integrate">{t.nav.integrate}</a>
-        <a href="#pricing">{t.nav.pricing}</a>
-        <a href="#faq">{t.nav.faq}</a>
-        <a href="#contact">{t.nav.contact}</a>
+        {[
+          ['demo', t.nav.demo],
+          ['what', t.nav.how],
+          ['features', t.nav.features],
+          ['integrate', t.nav.integrate],
+          ['pricing', t.nav.pricing],
+          ['faq', t.nav.faq],
+          ['contact', t.nav.contact],
+        ].map(([id, label]) => (
+          <a key={id} href={`#${id}`} className={activeSection === id ? 'active' : undefined}>
+            {label}
+          </a>
+        ))}
         <a className="btn btn-primary" href="#integrate">
           {t.nav.cta}
         </a>
