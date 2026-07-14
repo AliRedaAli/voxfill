@@ -125,21 +125,17 @@ export default function App() {
         </section>
       </div>
 
-      {/* stat band (full bleed) */}
-      <section className="stat-band">
-        <div className="container stat-grid">
-          {t.stats.map((s) => (
-            <div key={s.label}>
-              <p className="stat-value">{s.value}</p>
-              <p className="stat-label">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <div className="container">
+        {/* demo */}
+        <section id="demo" style={{ padding: '96px 0 56px' }}>
+          <Kicker>{t.demo.kicker}</Kicker>
+          <h2 className="section-title">{t.demo.title}</h2>
+          <p className="section-lead">{t.demo.lead}</p>
+          <Demo t={t.demo} />
+        </section>
+
         {/* what it does */}
-        <section id="what" style={{ padding: '96px 0 56px' }}>
+        <section id="what" style={{ padding: '40px 0 96px' }}>
           <Kicker>{t.what.kicker}</Kicker>
           {t.what.steps.map((step, i) => (
             <div key={step.num}>
@@ -151,14 +147,6 @@ export default function App() {
               </div>
             </div>
           ))}
-        </section>
-
-        {/* demo */}
-        <section id="demo" style={{ padding: '40px 0 96px' }}>
-          <Kicker>{t.demo.kicker}</Kicker>
-          <h2 className="section-title">{t.demo.title}</h2>
-          <p className="section-lead">{t.demo.lead}</p>
-          <Demo t={t.demo} />
         </section>
 
         <div className="hairline" />
@@ -195,38 +183,6 @@ export default function App() {
             </div>
           </div>
           <CodeSample />
-        </section>
-
-        <div className="hairline" />
-
-        {/* case studies (placeholders) */}
-        <section id="cases" style={{ padding: '96px 0' }}>
-          <Kicker>{t.cases.kicker}</Kicker>
-          <h2 className="section-title">{t.cases.title}</h2>
-          <div className="cards-3">
-            {t.cases.cards.map((c) => (
-              <div key={c.kicker} className="card elev-sm" style={{ gap: 14 }}>
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: '50%',
-                    border: '1px dashed var(--color-divider)',
-                    display: 'grid',
-                    placeItems: 'center',
-                    fontSize: 10,
-                    color: 'color-mix(in srgb, var(--color-text) 45%, transparent)',
-                  }}
-                >
-                  {t.cases.logo}
-                </div>
-                <span className="card-kicker">{c.kicker}</span>
-                <span className="card-title">{t.cases.placeholder}</span>
-                <p className="card-body">{c.body}</p>
-                <span className="card-meta">{t.cases.soon}</span>
-              </div>
-            ))}
-          </div>
         </section>
 
         <div className="hairline" />

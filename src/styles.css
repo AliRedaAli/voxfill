@@ -289,36 +289,6 @@ code, .mono { font-family: var(--font-mono); }
   100% { width: 60px; }
 }
 
-/* — stat band — */
-.stat-band {
-  background:
-    radial-gradient(900px 420px at 85% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%),
-    var(--color-section);
-  padding: 70px 0;
-}
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
-  gap: 42px 28px;
-}
-.stat-value {
-  font-size: clamp(36px, 3.6vw, 52px);
-  line-height: 1.1;
-  margin: 0;
-  margin-inline-start: -0.055em;
-  font-weight: 500;
-  font-feature-settings: 'tnum' 1;
-}
-[dir='rtl'] .stat-value { margin-inline-start: 0; }
-.stat-label {
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--color-text) 64%, transparent);
-  margin: 14px 0 0;
-}
-
 /* — what it does — */
 .step-row {
   display: grid;
@@ -535,7 +505,6 @@ code, .mono { font-family: var(--font-mono); }
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; padding: 72px 0 64px; }
   .hero-mark { display: none; }
-  .stat-grid { grid-template-columns: repeat(2, auto); }
   .step-row { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
   .demo-grid, .cards-3, .integrate-grid, .faq-grid { grid-template-columns: 1fr; }
   .nav { gap: 14px; }

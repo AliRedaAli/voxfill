@@ -18,12 +18,6 @@ export const translations = {
       tryDemo: 'Try the demo',
       guide: 'Integration guide →',
     },
-    stats: [
-      { value: '1', label: 'Script tag to embed' },
-      { value: '2-step', label: 'Pipeline — transcript, then extraction' },
-      { value: '0', label: 'DOM elements leave the browser' },
-      { value: '100%', label: 'Values re-validated server-side' },
-    ],
     what: {
       kicker: 'What it does',
       steps: [
@@ -141,27 +135,6 @@ export const translations = {
         ],
       ],
     },
-    cases: {
-      kicker: 'Case studies',
-      title: 'In the field',
-      soon: 'Coming soon',
-      placeholder: 'Case study placeholder',
-      logo: 'Logo',
-      cards: [
-        {
-          kicker: 'Healthcare intake',
-          body: 'Drop the customer story here — who they are, the form they voice-enabled, and the completion-rate change.',
-        },
-        {
-          kicker: 'Field service',
-          body: 'Drop the customer story here — technicians filling inspection reports hands-free, straight from the site.',
-        },
-        {
-          kicker: 'Government forms',
-          body: 'Drop the customer story here — accessibility-driven adoption and the audit that followed.',
-        },
-      ],
-    },
     pricing: {
       kicker: 'Pricing',
       title: 'Start free, scale when it works',
@@ -177,8 +150,8 @@ export const translations = {
         },
         {
           kicker: 'Pro',
-          price: '$49',
-          per: ' /mo',
+          price: 'Contact sales',
+          per: '',
           blurb: 'For forms in production.',
           features: [
             '10,000 voice fills / month',
@@ -186,7 +159,7 @@ export const translations = {
             'Transcript logs & analytics',
             'Priority support',
           ],
-          cta: 'Start Pro',
+          cta: 'Talk to us',
         },
         {
           kicker: 'Enterprise',
@@ -342,12 +315,6 @@ ar: {
       tryDemo: 'جرّب الآن',
       guide: 'دليل الربط ←',
     },
-    stats: [
-      { value: '1', label: 'سطر كود واحد للتضمين' },
-      { value: 'خطوتان', label: 'في المعالجة — تفريغ نصي ثم استخراج' },
-      { value: '0', label: 'من عناصر الصفحة يغادر المتصفح' },
-      { value: '100%', label: 'من القيم يُعاد التحقق منها على الخادم' },
-    ],
     what: {
       kicker: 'آلية العمل',
       steps: [
@@ -465,27 +432,6 @@ ar: {
         ],
       ],
     },
-    cases: {
-      kicker: 'قصص نجاح',
-      title: 'من الميدان',
-      soon: 'قريباً',
-      placeholder: 'قصة عميل — قريباً',
-      logo: 'الشعار',
-      cards: [
-        {
-          kicker: 'استقبال المرضى',
-          body: 'ضع قصة العميل هنا — من هم، والنموذج الذي فعّلوا فيه التعبئة الصوتية، وأثرها على نسبة الإكمال.',
-        },
-        {
-          kicker: 'الخدمات الميدانية',
-          body: 'ضع قصة العميل هنا — فنيون يعبّئون تقارير الفحص صوتياً من الموقع مباشرة، دون استخدام اليدين.',
-        },
-        {
-          kicker: 'النماذج الحكومية',
-          body: 'ضع قصة العميل هنا — تبنٍّ بدافع سهولة الوصول، والتدقيق الذي تلاه.',
-        },
-      ],
-    },
     pricing: {
       kicker: 'الباقات والأسعار',
       title: 'ابدأ مجاناً، ووسّع متى ما احتجت',
@@ -501,8 +447,8 @@ ar: {
         },
         {
           kicker: 'باقة Pro',
-          price: '$49',
-          per: ' / شهرياً',
+          price: 'تواصل مع المبيعات',
+          per: '',
           blurb: 'للنماذج في بيئة الإنتاج.',
           features: [
             '10,000 تعبئة صوتية شهرياً',
@@ -510,7 +456,7 @@ ar: {
             'سجلات التفريغ النصي وتقارير الاستخدام',
             'أولوية في الدعم الفني',
           ],
-          cta: 'اشترك في Pro',
+          cta: 'تواصل معنا',
         },
         {
           kicker: 'باقة المؤسسات',
