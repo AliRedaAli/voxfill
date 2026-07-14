@@ -32,6 +32,7 @@ export default function Demo({ t }) {
 
   const play = () => {
     if (phase !== 'idle' && phase !== 'done') return
+    window.umami?.track('demo-play')
     reset()
     setPhase('listening')
     setStatus(t.listening)
